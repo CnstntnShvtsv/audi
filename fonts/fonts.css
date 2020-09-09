@@ -1,0 +1,67 @@
+/* Audi Type Extended */
+@font-face {
+    font-family: 'Audi Type Extended';
+    src: url('AudiType-ExtendedBold.eot');
+    src: url('AudiType-ExtendedBold.eot?#iefix') format('embedded-opentype'),
+        url('AudiType-ExtendedBold.woff2') format('woff2'),
+        url('AudiType-ExtendedBold.woff') format('woff'),
+        url('AudiType-ExtendedBold.ttf') format('truetype'),
+        url('AudiType-ExtendedBold.svg#AudiType-ExtendedBold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Audi Type Extended';
+    src: url('AudiType-ExtendedNormal.eot');
+    src: url('AudiType-ExtendedNormal.eot?#iefix') format('embedded-opentype'),
+        url('AudiType-ExtendedNormal.woff2') format('woff2'),
+        url('AudiType-ExtendedNormal.woff') format('woff'),
+        url('AudiType-ExtendedNormal.ttf') format('truetype'),
+        url('AudiType-ExtendedNormal.svg#AudiType-ExtendedNormal') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Audi Type Wide */
+@font-face {
+    font-family: 'Audi Type Wide';
+    src: url('AudiType-WideBold.eot');
+    src: url('AudiType-WideBold.eot?#iefix') format('embedded-opentype'),
+        url('AudiType-WideBold.woff2') format('woff2'),
+        url('AudiType-WideBold.woff') format('woff'),
+        url('AudiType-WideBold.ttf') format('truetype'),
+        url('AudiType-WideBold.svg#AudiType-WideBold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Audi Type Wide';
+    src: url('AudiType-WideLight.eot');
+    src: url('AudiType-WideLight.eot?#iefix') format('embedded-opentype'),
+        url('AudiType-WideLight.woff2') format('woff2'),
+        url('AudiType-WideLight.woff') format('woff'),
+        url('AudiType-WideLight.ttf') format('truetype'),
+        url('AudiType-WideLight.svg#AudiType-WideLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Audi Type Wide';
+    src: url('AudiType-WideNormal.eot');
+    src: url('AudiType-WideNormal.eot?#iefix') format('embedded-opentype'),
+        url('AudiType-WideNormal.woff2') format('woff2'),
+        url('AudiType-WideNormal.woff') format('woff'),
+        url('AudiType-WideNormal.ttf') format('truetype'),
+        url('AudiType-WideNormal.svg#AudiType-WideNormal') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

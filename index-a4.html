@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicons/favicon.ico">
+
+    <title>A4 Edition One</title>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="hellopreloader">
+        <div id="hellopreloader_preload"></div>
+    </div>
+    <script type="text/javascript">
+        var hellopreloader = document.getElementById("hellopreloader_preload");
+
+        function fadeOutnojquery(el) {
+            el.style.opacity = 1;
+            var interhellopreloader = setInterval(function () {
+                el.style.opacity = el.style.opacity - 0.05;
+                if (el.style.opacity <= 0.05) {
+                    clearInterval(interhellopreloader);
+                    hellopreloader.style.display = "none";
+                }
+            }, 16);
+        }
+        window.onload = function () {
+            setTimeout(function () {
+                fadeOutnojquery(hellopreloader);
+            }, 500); // Время прелоадера 0.5s
+        };
+    </script>
+    <style>
+        #hellopreloader>p {
+            display: none;
+        }
+
+        #hellopreloader_preload {
+            display: block;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: #808080 url("images/tail-spin.svg") center center no-repeat;
+            background-size: 48px;
+        }
+    </style>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header">
+                <div class="logo-title">
+                    <span>Ауди</span> <br>
+                    Центр Выборгский
+                </div>
+                <div class="contacts">
+                    <div class="item">
+                        <div class="sup-info">с 9:00 до 21:00</div>
+                        <div class="main-info">+7 (812) 501-13-34
+                            <img src="images/icon_phone.svg">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="sup-info">Официальный дилер Audi</div>
+                        <div class="main-info">Выборгское шоссе, д. 352 лит. А
+                            <img src="images/icon_lockation.svg">
+                        </div>
+                    </div>
+                </div>
+                <img class="logo" src="images/logo_audi.svg"></img>
+
+                <!-- Подсказка "свайп" -->
+                <div class="swipe-box">
+                    <div class="swipe"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="container">
+            <div class="navbar-nav">
+                <a class="nav-link">A3 Sedan</a>
+                <a class="nav-link active" href="index-a4.html">A4 Edition One*</a>
+                <a class="nav-link" href="index-a5.html">A5 Edition One*</a>
+                <a class="nav-link">A6</a>
+                <a class="nav-link">A7</a>
+                <a class="nav-link">A8L</a>
+                <a class="nav-link">Q3</a>
+                <a class="nav-link">Q3 Sportback</a>
+                <a class="nav-link">Q5</a>
+                <a class="nav-link">Q7</a>
+                <a class="nav-link">Q8</a>
+                <a class="empty-link"></a>
+            </div>
+        </div>
+        <!-- Banner -->
+        <div class="banner banner-a4"></div>
+        <div class="container">
+            <div class="specifications">
+                <div class="item">
+                    <img src="images/icon_gearbox.svg">
+                    <span>7-ст. S tronic</span>
+                </div>
+                <div class="item">
+                    <img src="images/icon_gas-station.svg">
+                    <span>5,9-5,5 л./100 км</span>
+                </div>
+                <div class="item">
+                    <img src="images/icon_wheel-drive.svg">
+                    <span>Передний привод</span>
+                </div>
+                <div class="item">
+                    <img src="images/icon_car-speed.svg">
+                    <span>225(220) км/ч</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <main>
+        <div class="container">
+            <section class="inner-title">
+                <h1>Обновленный Audi&nbsp;A4 35&nbsp;TFSI
+                    лимитированной серии Edition One*</h1>
+                <div class="pre-order">
+                    <p>Престиж со спортивным характером. Обновленный Audi A4 35 TFSI в комплектации Edition One сочетает
+                        в
+                        себе внешнюю эстетику, комфорт премиум класса и превосходную управляемость.</p>
+                    <p>Этому способствуют эксклюзивный подход к внешнему дизайну, высококачественный и
+                        многофункциональный
+                        интерьер, современные системы помощи водителю и эффективный и при этом экономичный двигатель</p>
+                    <div class="item-buttons">
+                        <a class="order-btn">Сделать предзаказ</a>
+                        <a class="pdf-btn" href="#" target="_blank">Смотреть PDF</a>
+                    </div>
+                </div>
+            </section>
+            <section class="common-features">
+                <h2>Общие особенности</h2>
+                <div class="cf-items">
+                    <div class="item" id="cf-item-01_btn">
+                        <img src="images/audi-a4/img-md_features-01.jpg">
+                        <p>35 TFSI 150 л.с. front S tronic</p>
+                    </div>
+                    <div class="item" id="cf-item-02_btn">
+                        <img src="images/audi-a4/img-md_features-02.jpg">
+                        <p>Audi virtual cockpit</p>
+                    </div>
+                    <div class="item" id="cf-item-03_btn">
+                        <img src="images/audi-a4/img-md_features-03.jpg">
+                        <p>Светодиодные фары Audi Matrix / светодиодные задние фонари с передними и задними
+                            динамическими указателями поротота</p>
+                    </div>
+                    <div class="item" id="cf-item-04_btn">
+                        <img src="images/audi-a4/img-md_features-04.jpg">
+                        <p>Стайлинг-пакет внешней отделки черного цвета</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Pop-Ups -->
+        <div class="wrapper">
+            <!-- Block Pop-up -->
+            <div class="cf-item-info" id="cf-item-01">
+                <a class="close-btn">
+                    <img src="images/btn_close.svg">
+                </a>
+                <h3>35 TFSI 150 л.с. front&nbsp;S&nbsp;tronic</h3>
+                <p>Бензиновый двигатель 35 TFSI объемом 1984 см³ развивает мощность в 150 л.с. и разгоняет автомобиль от
+                    0 до 100 Км/ч за 8,5 сек. А тандем с коробкой передач S-tronic намного повышает комфорт от вождения,
+                    увеличивает динамику разгона, а также изрядно экономит топливо.</p>
+            </div>
+            <div class="cf-item-info" id="cf-item-02">
+                <a class="close-btn">
+                    <img src="images/btn_close.svg">
+                </a>
+                <h3>Audi virtual cockpit</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, officiis voluptatum nisi eos laborum
+                    eaque similique?</p>
+            </div>
+            <div class="cf-item-info" id="cf-item-03">
+                <a class="close-btn">
+                    <img src="images/btn_close.svg">
+                </a>
+                <h3>Светодиодные фары Audi&nbsp;Matrix</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla ut amet illo fuga dolorum tempora quo
+                    dolores recusandae voluptatem et.</p>
+            </div>
+            <div class="cf-item-info" id="cf-item-04">
+                <a class="close-btn">
+                    <img src="images/btn_close.svg">
+                </a>
+                <h3>Стайлинг-пакет внешней&nbsp;отделки</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate quaerat alias voluptatem
+                    doloribus corporis ea modi accusamus molestiae?</p>
+            </div>
+        </div>
+
+        <div class="form-wrapper">
+            <!-- Pre-order Pop-up -->
+            <div class="pre-order-form">
+                <h2>Получить предложение</h2>
+                <p>Вы можете оставить заявку на консультацию и наши менеджеры помогут вам найти автомобиль и ответить на
+                    все вопросы.</p>
+                <form action="">
+                    <input type="tel" placeholder="Телефон">
+                    <div class="checkbox">
+                        <input type="checkbox" name="data-processing" id="data-processing">
+                        <label for="data-processing">Согласие на <span>обработку персональных данных</span></label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="advertising" id="advertising">
+                        <label for="advertising">Согласие на <span>получение рекламной информации
+                                Audi</span></label>
+                    </div>
+                    <input type="button" value="Отправить заявку">
+                </form>
+                <img class="close-btn" src="images/btn_close-black.svg">
+            </div>
+        </div>
+
+        <div class="container">
+            <section class="exterior-features">
+                <h2>Особенности экстерьера</h2>
+                <div class="ef-items">
+                    <div class="item">
+                        <img src="images/audi-a4/img-sm_exterior-01.jpg">
+                        <p>Легкосплавные диски Audi Sport, дизайн «5 рукавов, трапеция», titanium gray, с полированной
+                            обводкой, размер 8J x 18</p>
+                    </div>
+                    <div class="item">
+                        <img src="images/audi-a4/img-sm_exterior-02.jpg">
+                        <p>Внешние зеркала заднего вида с электрической регулировкой и обогревом, с функциями
+                            складывания и автозатемнения</p>
+                    </div>
+                    <div class="item">
+                        <img src="images/audi-a4/img-sm_exterior-03.jpg">
+                        <p>Окраска кузова: синий металлик (Navarra blue)</p>
+                    </div>
+                    <div class="item">
+                        <img src="images/audi-a4/img-sm_exterior-04.jpg">
+                        <p>Окраска кузова: белый металлик (Glacier white)</p>
+                    </div>
+                    <div class="item">
+                        <img src="images/audi-a4/img-sm_exterior-05.jpg">
+                        <p>Линия Sport</p>
+                    </div>
+                    <div class="item">
+                        <img src="images/audi-a4/img-sm_exterior-06.jpg">
+                        <p>Окраска корпусов внешних зеркал в чёрный глянцевый цвет</p>
+                    </div>
+                </div>
+            </section>
+            <section class="interior-features">
+                <h2>Особенности интерьера</h2>
+                <div class="if-items">
+                    <div class="item">
+                        <img src="images/audi-a4/img-sm_interior-01.jpg">
+                        <p>Многофункциональный спортивный кожаный руль, дизайн «3 спицы» со скошенным нижним сегментом
+                        </p>
+                    </div>
+                    <div class="item">
+                        <img src="images/audi-a4/img-sm_interior-02.jpg">
+                        <p>Зеркало заднего вида в салоне с автоматическим затемнением</p>
+                    </div>
+                    <div class="item">
+                        <img src="images/audi-a4/img-sm_interior-03.jpg">
+                        <p>Audi smartphone interface</p>
+                    </div>
+                    <div class="item">
+                        <img src="images/audi-a4/img-sm_interior-04.jpg">
+                        <p>Audi phone box</p>
+                    </div>
+                    <div class="item">
+                        <img src="images/audi-a4/img-sm_interior-05.jpg">
+                        <p>Электрические регулировки передних сидений</p>
+                    </div>
+                    <div class="item">
+                        <img src="images/audi-a4/img-sm_interior-06.jpg">
+                        <p>3-зонный климат-контроль</p>
+                    </div>
+                    <div class="item">
+                        <img src="images/audi-a4/img-sm_interior-07.jpg">
+                        <p>Комбинированная обивка сидений материалом Alcantara (перфорированным)/кожей, с оттиском S
+                            line на спинках передних сидений</p>
+                    </div>
+                    <div class="item">
+                        <img src="images/audi-a4/img-sm_interior-08.jpg">
+                        <p>Комфортный ключ с сенсорной функцией открывания багажника, с сигнализацией</p>
+                    </div>
+                </div>
+            </section>
+            <section class="personal-profit">
+                <h3>Ваши персональны выгоды с Edition One</h3>
+                <ul>
+                    <li>Уникальное ценовое предложение только до конца сентября – преимущество 285 000 рублей</li>
+                    <li>Специальные ставки по программам трейд-ин:</li>
+                    <li>Размер бонуса по программе Trade-in** – 60 000 р.</li>
+                    <li>Размер бонуса по программе Премия лояльности*** – 80 000 р.</li>
+                    <li>Размер бонуса по программе Audi Family**** – 110 000 р.</li>
+                    <li>Выгодные ставки финансирования по программам Audi Credit - от 4%</li>
+                    <li>Удобная система онлайн бронирования</li>
+                </ul>
+                <p>На автомобили марки Audi производителем предоставляется гарантия качества на срок 2 года, а также на
+                    дополнительные 2 года или до достижения общего пробега автомобиля 120 000 км (в зависимости от того,
+                    какое событие что наступит ранее), при этом в первые 2 года пробег не ограничивается и не
+                    учитывается.</p>
+                <p>*Лимитированная серия Edition One</p>
+                <p>**Trade-in – все марки без ограничения возраста, кроме российского и китайского производства</p>
+                <p>***Премия лояльности – марки Audi, MB, BMW, Volvo, Lexus, Infiniti, Jaguar, LR, Porsche до 7 лет с
+                    момента первой регистрации</p>
+                <p>****Audi Family – повышенная ставка для владельцев Audi до 7 лет</p>
+            </section>
+            <section class="special-offer">
+                <h2>У вас есть вопросы? <br>
+                    Звоните +7 (812) 501-13-34</h2>
+                <p>Вы можете оставить заявку на консультацию и наши менеджеры помогут вам найти автомобиль и ответить на
+                    все вопросы.</p>
+                <form action="">
+                    <input type="tel" placeholder="Телефон">
+                    <input type="button" value="Получить спецпредложение">
+                    <div class="checkbox">
+                        <input type="checkbox" name="data-processing" id="data-processing">
+                        <label for="data-processing">Согласие на <span>обработку персональных данных</span></label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="advertising" id="advertising">
+                        <label for="advertising">Согласие на <span>получение рекламной информации Audi</span></label>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <div class="container-special">
+            <section class="map-form">
+                <div class="map">
+                    <iframe
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3Abcf7028403311870dc71d9b640a4b3c5881a2c419ae849d4ebcbcf0cd57a3c0a&amp;source=constructor"
+                        width="1200" height="640" frameborder="0"></iframe>
+                </div>
+                <div class="form">
+                    <div class="form-header">
+                        <div class="logo-title">
+                            <p class="txt-red">Ауди</p>
+                            <p>Центр Выборгский</p>
+                            <p class="txt-thin">Официальный дилер Audi</p>
+                        </div>
+
+                        <div class="contacts">+7 (812) 501-13-34
+                            <img src="images/icon_phone.svg">
+                        </div>
+
+                        <div class="address">Санкт-Петербург, Выборгское шоссе, д. 352 лит. А <br> Ежедневно с 9:00 до
+                            21:00
+                            <img src="images/icon_lockation.svg">
+                        </div>
+                        <a class="hidden-link"
+                            href="https://yandex.ru/maps/2/saint-petersburg/house/vyborgskoye_shosse_352/Z0kYdAJkTUcEQFhqfXx4dXxnbA==/?ll=30.252423%2C60.094688&z=14.66"
+                            target="_blank">
+                            Показать на карте
+                        </a>
+                    </div>
+                    <form action="">
+                        <input type="tel" placeholder="Телефон">
+                        <input class="order-btn" type="button" value="Сделать предзаказ">
+                        <div class="checkbox">
+                            <input type="checkbox" name="data-processing" id="data-processing">
+                            <label for="data-processing">Согласие на <span>обработку персональных данных</span></label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" name="advertising" id="advertising">
+                            <label for="advertising">Согласие на <span>получение рекламной информации
+                                    Audi</span></label>
+                        </div>
+                    </form>
+                    <img src="images/img_footer-form.jpg" alt="">
+                </div>
+            </section>
+            <section class="add-info">
+                <div class="limiter">
+                    <p>1Крупнейший дилер Audi в Санкт-Петербурге по количеству демонстрируемых новых автомобилей в
+                        шоу-руме. Обращаем ваше внимание на то, что вся предоставленная на сайте информация, касающаяся
+                        максимальных цен перепродажи, спецификаций и технических характеристик носит информационный
+                        характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи
+                        437 (2) Гражданского кодекса Российской Федерации. Для получения подробной информации,
+                        пожалуйста, обращайтесь к официальному дилеру марки Audi.</p>
+                    <p>1Крупнейший дилер Audi в Санкт-Петербурге по количеству демонстрируемых новых автомобилей в
+                        шоу-руме. Обращаем ваше внимание на то, что вся предоставленная на сайте информация, касающаяся
+                        максимальных цен перепродажи, спецификаций и технических характеристик носит информационный
+                        характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи
+                        437 (2) Гражданского кодекса Российской Федерации. Для получения подробной информации,
+                        пожалуйста, обращайтесь к официальному дилеру марки Audi.</p>
+                </div>
+                <a class="expand-btn">Развернуть</a>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>©2020 AUDI Все права защищены</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/jquery-1.12.4.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="scripts/slider.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

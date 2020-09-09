@@ -1,0 +1,1213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+}
+a,
+a::before,
+a::after {
+  transition: all 0.1s ease-in;
+}
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Audi Type Wide', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+.container-special {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+h1 {
+  font-family: 'Audi Type Extended', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 58px;
+}
+h2 {
+  font-family: 'Audi Type Extended', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+h3 {
+  font-family: 'Audi Type Extended', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+header .header {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+header .header .logo-title {
+  font-family: 'Audi Type Extended', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+header .header .logo-title span {
+  color: #bb0a30;
+}
+header .header .contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .header .contacts .item {
+  padding-left: 20px;
+}
+header .header .contacts .item .sup-info {
+  color: #808080;
+  font-size: 12px;
+  font-weight: 300;
+}
+header .header .contacts .item .main-info {
+  font-size: 15px;
+  position: relative;
+}
+header .header .contacts .item .main-info img {
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  display: block;
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  object-position: center;
+}
+header .header .contacts .item + .item {
+  margin-left: 35px;
+}
+header .header .logo {
+  display: block;
+  width: 110px;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+header .header .swipe-box {
+  visibility: hidden;
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  z-index: 1;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+header .header .swipe-box .swipe {
+  width: 25px;
+  height: 25px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: relative;
+  animation-name: swipe;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes swipe {
+  0% {
+    opacity: 1;
+    width: 25px;
+    height: 25px;
+    right: 0px;
+    top: 0px;
+  }
+  20% {
+    opacity: 0.5;
+    width: 20px;
+    height: 20px;
+    right: 0px;
+    top: 0px;
+  }
+  40% {
+    opacity: 0.5;
+    width: 20px;
+    height: 20px;
+    right: 80px;
+    top: 0px;
+  }
+  60% {
+    opacity: 1;
+    width: 25px;
+    height: 25px;
+    right: 80px;
+    top: 0px;
+  }
+  80% {
+    opacity: 0;
+    width: 25px;
+    height: 25px;
+    right: 80px;
+    top: 0px;
+  }
+  100% {
+    opacity: 0;
+    width: 25px;
+    height: 25px;
+    right: 0px;
+    top: 0px;
+  }
+}
+.navbar {
+  background-color: #000000;
+  width: 100%;
+}
+.navbar .navbar-nav {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* Для яблочных устройств */
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  align-items: center;
+}
+.navbar .navbar-nav .nav-link {
+  padding: 10px 0;
+  margin-right: 40px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  position: relative;
+}
+.navbar .navbar-nav .nav-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+}
+.navbar .navbar-nav .nav-link:active {
+  color: #b3b3b3;
+}
+.navbar .navbar-nav .nav-link:active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 100%;
+  height: 1px;
+  background-color: #b3b3b3;
+}
+.navbar .navbar-nav .nav-link.active {
+  color: #e5e5e5;
+}
+.navbar .navbar-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+.navbar .navbar-nav .nav-link:last-child {
+  margin-right: 0;
+}
+.navbar .navbar-nav .empty-link {
+  cursor: auto;
+  padding: 10px 0;
+  margin-right: 40px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  position: relative;
+  min-width: 100px;
+}
+.navbar .banner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+}
+.navbar .banner-a4 {
+  background-image: url("../images/audi-a4/img-lg_banner-a4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+}
+.navbar .banner-a5 {
+  background-image: url("../images/audi-a5/img-lg_banner-a5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+}
+.navbar .specifications {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+.navbar .specifications .item {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin: 0 30px;
+}
+.navbar .specifications .item img {
+  display: block;
+  margin-right: 14px;
+}
+.navbar .specifications .item span {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.navbar .specifications .item:first-child {
+  margin-left: 0;
+}
+.navbar .specifications .item:last-child {
+  margin-right: 0;
+}
+.inner-title {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 120px;
+}
+.inner-title h1 {
+  padding-right: 40px;
+}
+.inner-title .pre-order p {
+  padding-right: 30px;
+  font-size: 18px;
+  line-height: 32px;
+  margin-top: 12px;
+}
+.inner-title .pre-order .item-buttons {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+}
+.inner-title .pre-order .item-buttons a {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-right: 4px;
+  white-space: nowrap;
+  text-align: center;
+}
+.inner-title .pre-order .item-buttons .order-btn {
+  padding: 14px;
+  width: 100%;
+  max-width: 270px;
+  display: inline-block;
+  background-color: #000000;
+  border: 1px solid #000000;
+  color: #ffffff;
+}
+.inner-title .pre-order .item-buttons .order-btn:hover {
+  background-color: #333333;
+  border: 1px solid #333333;
+  color: #ffffff;
+}
+.inner-title .pre-order .item-buttons .order-btn:active {
+  background-color: #000000;
+  border: 1px solid #000000;
+  color: #ffffff;
+}
+.inner-title .pre-order .item-buttons .pdf-btn {
+  padding: 14px;
+  width: 100%;
+  max-width: 270px;
+  display: inline-block;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  color: #000000;
+}
+.inner-title .pre-order .item-buttons .pdf-btn:hover {
+  border: 1px solid #b3b3b3;
+  color: #b3b3b3;
+}
+.inner-title .pre-order .item-buttons .pdf-btn:active {
+  border: 1px solid #000000;
+  color: #000000;
+}
+.common-features {
+  padding-top: 120px;
+}
+.common-features h2 {
+  text-align: center;
+}
+.common-features .cf-items {
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 296px));
+  grid-gap: 40px 4px;
+  justify-content: center;
+}
+.common-features .cf-items .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  transition: font-weight 0.8s ease, outline 0.8s ease;
+}
+.common-features .cf-items .item img {
+  display: block;
+  transition: all 0.1s ease;
+}
+.common-features .cf-items .item p {
+  margin-top: 14px;
+  text-align: center;
+  transition: all 0.1s ease;
+}
+.common-features .cf-items .item:hover img {
+  opacity: 0.5;
+  outline: 1px solid #000000;
+}
+.common-features .cf-items .item:hover p {
+  font-weight: 700;
+}
+.common-features .cf-items .item:active img {
+  opacity: 0.75;
+  outline: none;
+}
+.common-features .cf-items .item:active p {
+  font-weight: 400;
+}
+.common-features .cf-items .item.active img {
+  opacity: 0.5;
+  outline: 1px solid #000000;
+}
+.common-features .cf-items .item.active p {
+  font-weight: 700;
+}
+.wrapper {
+  display: none;
+  z-index: 1000;
+  overflow-y: scroll;
+}
+.wrapper .cf-item-info {
+  display: none;
+}
+.wrapper .cf-item-info.show {
+  background-color: #e5e5e5;
+  width: 100%;
+  margin-top: 40px;
+  padding-top: 30px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.wrapper .cf-item-info.show .close-btn {
+  background-color: #000000;
+  border-radius: 50%;
+  padding: 15px;
+}
+.wrapper .cf-item-info.show .close-btn img {
+  display: block;
+}
+.wrapper .cf-item-info.show .close-btn:hover {
+  background-color: #333333;
+}
+.wrapper .cf-item-info.show .close-btn:active {
+  background-color: #000000;
+}
+.wrapper .cf-item-info.show h3 {
+  margin-top: 30px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+  padding: 0 18px;
+}
+.wrapper .cf-item-info.show p {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  width: 100%;
+  max-width: 688px;
+  padding: 0 18px;
+}
+.form-wrapper {
+  display: none;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.form-wrapper .pre-order-form {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 744px;
+  padding: 48px 18px 76px 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.form-wrapper .pre-order-form h2 {
+  width: 100%;
+  text-align: center;
+}
+.form-wrapper .pre-order-form p {
+  margin-top: 24px;
+  width: 100%;
+  max-width: 576px;
+  text-align: center;
+}
+.form-wrapper .pre-order-form form {
+  margin-top: 36px;
+  width: 100%;
+  max-width: 448px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.form-wrapper .pre-order-form form input[type=tel] {
+  font-family: 'Audi Type Extended', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #000000;
+  outline: none;
+}
+.form-wrapper .pre-order-form form .checkbox {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+}
+.form-wrapper .pre-order-form form .checkbox input[type=checkbox] {
+  min-width: 20px;
+  min-height: 20px;
+}
+.form-wrapper .pre-order-form form .checkbox label {
+  margin-left: 8px;
+  font-family: 'Audi Type Extended', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+.form-wrapper .pre-order-form form .checkbox label span {
+  color: #bb0a30;
+  text-decoration: underline;
+}
+.form-wrapper .pre-order-form form .checkbox + .checkbox {
+  margin-top: 14px;
+}
+.form-wrapper .pre-order-form form input[type=button] {
+  margin-top: 60px;
+  font-size: 18px;
+  font-weight: 400;
+  display: inline-block;
+  width: 100%;
+  max-width: 256px;
+  padding: 14px;
+  background-color: #000000;
+  border: 1px solid #000000;
+  outline: none;
+  color: #ffffff;
+  transition: all 0.1s ease-in;
+}
+.form-wrapper .pre-order-form form input[type=button]:hover {
+  background-color: #333333;
+  border: 1px solid #333333;
+  color: #ffffff;
+}
+.form-wrapper .pre-order-form form input[type=button]:active {
+  background-color: #000000;
+  border: 1px solid #000000;
+  color: #ffffff;
+}
+.form-wrapper .pre-order-form img {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.exterior-features {
+  padding-top: 120px;
+}
+.exterior-features h2 {
+  text-align: center;
+}
+.exterior-features .ef-items {
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: minmax(auto, 464px) minmax(auto, 464px);
+  grid-gap: 40px;
+  justify-content: center;
+}
+.exterior-features .ef-items .item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.exterior-features .ef-items img {
+  display: block;
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.interior-features {
+  padding-top: 120px;
+}
+.interior-features h2 {
+  text-align: center;
+}
+.interior-features .if-items {
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: minmax(auto, 464px) minmax(auto, 464px);
+  grid-gap: 40px;
+  justify-content: center;
+}
+.interior-features .if-items .item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.interior-features .if-items img {
+  display: block;
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.personal-profit {
+  padding-top: 120px;
+  width: 100%;
+  max-width: 1024px;
+}
+.personal-profit h3 {
+  padding-left: 64px;
+}
+.personal-profit ul {
+  padding-top: 20px;
+  padding-left: 74px;
+  padding-bottom: 20px;
+  list-style-type: ">";
+}
+.personal-profit ul li {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 10px;
+  padding-left: 24px;
+}
+.personal-profit p {
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 10px;
+  padding-left: 24px;
+}
+.special-offer {
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.special-offer h2 {
+  text-align: center;
+  width: 100%;
+  max-width: 576px;
+}
+.special-offer p {
+  text-align: center;
+  width: 100%;
+  max-width: 576px;
+  margin-top: 20px;
+}
+.special-offer form {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 448px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.special-offer form input[type=tel] {
+  font-family: 'Audi Type Extended', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #000000;
+  outline: none;
+}
+.special-offer form input[type=button] {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  display: inline-block;
+  width: 100%;
+  max-width: 336px;
+  padding: 14px;
+  background-color: #000000;
+  border: 1px solid #000000;
+  outline: none;
+  color: #ffffff;
+  transition: all 0.1s ease-in;
+}
+.special-offer form input[type=button]:hover {
+  background-color: #333333;
+  border: 1px solid #333333;
+  color: #ffffff;
+}
+.special-offer form input[type=button]:active {
+  background-color: #000000;
+  border: 1px solid #000000;
+  color: #ffffff;
+}
+.special-offer form .checkbox {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+}
+.special-offer form .checkbox input[type=checkbox] {
+  min-width: 20px;
+  min-height: 20px;
+}
+.special-offer form .checkbox label {
+  margin-left: 8px;
+  font-family: 'Audi Type Extended', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+.special-offer form .checkbox label span {
+  text-decoration: underline;
+}
+.special-offer form .checkbox + .checkbox {
+  margin-top: 14px;
+}
+.map-form {
+  margin-top: 120px;
+  position: relative;
+  border-bottom: 1px solid #808080;
+}
+.map-form .map {
+  width: 100%;
+}
+.map-form .map iframe {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  height: 640px;
+}
+.map-form .form {
+  position: absolute;
+  top: 48px;
+  left: 48px;
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+}
+.map-form .form .form-header {
+  padding: 20px 24px;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.map-form .form .form-header .logo-title {
+  font-family: 'Audi Type Extended', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.map-form .form .form-header .logo-title .txt-red {
+  color: #bb0a30;
+}
+.map-form .form .form-header .logo-title .txt-thin {
+  font-weight: 700;
+}
+.map-form .form .form-header .contacts {
+  margin-top: 18px;
+  padding-left: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  position: relative;
+}
+.map-form .form .form-header .contacts img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: block;
+  width: 10px;
+  height: 14px;
+  object-fit: contain;
+  object-position: center;
+}
+.map-form .form .form-header .address {
+  margin-top: 12px;
+  padding-left: 16px;
+  font-size: 13px;
+  font-weight: 400;
+  position: relative;
+}
+.map-form .form .form-header .address img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 10px;
+  height: 14px;
+  object-fit: contain;
+  object-position: center;
+}
+.map-form .form .form-header .hidden-link {
+  display: none;
+  margin-top: 12px;
+  padding-left: 16px;
+  font-size: 11px;
+  font-weight: 400;
+  color: #bb0a30;
+  text-decoration: underline;
+}
+.map-form .form .form-header .hidden-link:hover {
+  color: #5a0517;
+}
+.map-form .form .form-header .hidden-link:active {
+  color: #bb0a30;
+}
+.map-form .form form {
+  padding: 20px 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.map-form .form form input[type=tel] {
+  font-family: 'Audi Type Extended', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #000000;
+  outline: none;
+}
+.map-form .form form input[type=button] {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  display: inline-block;
+  width: 100%;
+  max-width: 288px;
+  padding: 14px;
+  background-color: #000000;
+  border: 1px solid #000000;
+  outline: none;
+  color: #ffffff;
+  transition: all 0.1s ease-in;
+}
+.map-form .form form input[type=button]:hover {
+  background-color: #333333;
+  border: 1px solid #333333;
+  color: #ffffff;
+}
+.map-form .form form input[type=button]:active {
+  background-color: #000000;
+  border: 1px solid #000000;
+  color: #ffffff;
+}
+.map-form .form form .checkbox {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+}
+.map-form .form form .checkbox input[type=checkbox] {
+  min-width: 20px;
+  min-height: 20px;
+}
+.map-form .form form .checkbox label {
+  margin-left: 8px;
+  font-family: 'Audi Type Extended', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+.map-form .form form .checkbox label span {
+  text-decoration: underline;
+}
+.map-form .form form .checkbox + .checkbox {
+  margin-top: 8px;
+}
+.map-form .form img {
+  display: block;
+  width: 100%;
+  height: 156px;
+  object-position: center;
+  object-fit: cover;
+}
+.add-info .limiter {
+  width: 100%;
+  max-height: 88px;
+  margin: 40px 0;
+  padding: 0 100px;
+  overflow: hidden;
+  transition: all 0.25s ease-in;
+}
+.add-info .limiter p {
+  color: #808080;
+  font-size: 15px;
+  font-weight: 400;
+  overflow: hidden;
+}
+.add-info .limiter p + p {
+  margin-top: 12px;
+}
+.add-info .limiter.show {
+  transition: all 0.25s ease-out;
+  max-height: 880px;
+}
+.add-info .expand-btn {
+  display: block;
+  border-top: 1px solid #808080;
+  text-align: center;
+  color: #808080;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 20px;
+  margin: 0 auto;
+}
+.add-info .expand-btn:hover {
+  color: #000000;
+}
+.add-info .expand-btn:active {
+  color: #808080;
+}
+footer {
+  background-color: #000000;
+}
+footer p {
+  color: #ffffff;
+  font-size: 15px;
+  text-align: center;
+  padding: 12px 0;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+  .navbar {
+    overflow: hidden;
+  }
+  .navbar .navbar-nav {
+    overflow-x: auto;
+    /* Для яблочных устройств */
+    -webkit-overflow-scrolling: touch;
+    /* Добавим дополнительный нижнее поле элементу, в котором прокручивается меню */
+    padding-bottom: 16px;
+    /* С помощью отрицательного отступа компенсируем «нарощенное» поле  */
+    margin-bottom: -16px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header .header .swipe-box {
+    visibility: visible;
+  }
+}
+@media screen and (max-width: 992px) {
+  .container {
+    padding: 0 32px;
+  }
+  .container-special {
+    padding: 0 32px;
+  }
+  h1 {
+    font-size: 36px;
+    line-height: 52px;
+  }
+  header .header {
+    padding: 15px 0;
+  }
+  header .header .contacts .item:first-child .sup-info {
+    display: none;
+  }
+  header .header .contacts .item:last-child {
+    display: none;
+  }
+  header .header .contacts .item + .item {
+    margin-left: 0;
+  }
+  .navbar .banner {
+    height: 500px;
+  }
+  .navbar .specifications {
+    justify-content: space-between;
+    padding: 12px 0;
+  }
+  .navbar .specifications .item {
+    height: 28px;
+    margin: 0 12px;
+  }
+  .navbar .specifications .item img {
+    margin-right: 8px;
+    transform: scale(0.6);
+  }
+  .navbar .specifications .item span {
+    font-size: 13px;
+  }
+  .inner-title {
+    flex-direction: column;
+    padding-top: 60px;
+  }
+  .inner-title h1 {
+    padding-right: 0;
+  }
+  .inner-title .pre-order .item-buttons {
+    margin-top: 40px;
+  }
+  .common-features {
+    padding-top: 80px;
+  }
+  .exterior-features {
+    padding-top: 80px;
+  }
+  .exterior-features .ef-items {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    justify-items: center;
+  }
+  .exterior-features .ef-items .item {
+    width: 100%;
+    max-width: 576px;
+  }
+  .interior-features {
+    padding-top: 80px;
+  }
+  .interior-features .if-items {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    justify-items: center;
+  }
+  .interior-features .if-items .item {
+    width: 100%;
+    max-width: 576px;
+  }
+  .personal-profit {
+    padding-top: 80px;
+  }
+  .special-offer {
+    padding-top: 80px;
+  }
+  .map-form {
+    margin-top: 80px;
+  }
+  .add-info .limiter {
+    padding: 0 32px;
+  }
+  .wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .wrapper .cf-item-info.show {
+    background-color: #e5e5e5;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px 60px 90px 60px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .wrapper .cf-item-info.show h3 {
+    padding: 0;
+  }
+  .wrapper .cf-item-info.show p {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+  .container-special {
+    padding: 0;
+  }
+  .personal-profit h3 {
+    padding-left: 0;
+  }
+  .personal-profit ul {
+    padding-left: 10px;
+  }
+  .personal-profit p {
+    padding-left: 0;
+  }
+  .add-info .limiter {
+    padding: 0 24px;
+  }
+  header .header {
+    padding: 10px 0;
+  }
+  header .header .logo-title {
+    font-size: 12px;
+  }
+  header .header .logo {
+    width: 72px;
+  }
+  .navbar .banner {
+    height: 400px;
+  }
+  .navbar .specifications {
+    flex-wrap: wrap;
+  }
+  .navbar .specifications .item {
+    flex-basis: 50%;
+    justify-content: center;
+    height: 28px;
+    margin: 6px 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 0 18px;
+  }
+  h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  header .header .contacts {
+    display: none;
+  }
+  .navbar .banner {
+    height: 320px;
+  }
+  .navbar .specifications .item:nth-child(odd) {
+    justify-content: flex-start;
+  }
+  .navbar .specifications .item:nth-child(even) {
+    justify-content: flex-end;
+  }
+  .inner-title {
+    padding-top: 40px;
+  }
+  .inner-title .pre-order p {
+    line-height: 30px;
+  }
+  .inner-title .pre-order .item-buttons {
+    flex-direction: column;
+  }
+  .inner-title .pre-order .item-buttons a + a {
+    margin-top: 8px;
+  }
+  .exterior-features .ef-items img {
+    width: 80px;
+  }
+  .interior-features .if-items img {
+    width: 80px;
+  }
+  .map-form {
+    padding: 0 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .map-form .map {
+    display: none;
+  }
+  .map-form .form {
+    position: static;
+    width: 100%;
+    max-width: 448px;
+    background-color: #ffffff;
+  }
+  .map-form .form .form-header {
+    padding: 0;
+  }
+  .map-form .form .form-header .address {
+    font-size: 11px;
+  }
+  .map-form .form .form-header .hidden-link {
+    display: inline-block;
+  }
+  .map-form .form form {
+    margin-top: 20px;
+    margin-bottom: 80px;
+    padding: 0;
+  }
+  .map-form .form img {
+    display: none;
+  }
+  .add-info .limiter {
+    padding: 0 18px;
+  }
+  .wrapper {
+    background-color: #e5e5e5;
+  }
+  .wrapper .cf-item-info.show {
+    padding: 18px;
+  }
+}
+@media screen and (max-width: 448px) {
+  .navbar .banner {
+    height: 240px;
+  }
+  .navbar .specifications {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+  .navbar .specifications .item {
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 200px;
+  }
+  .navbar .specifications .item:nth-child(odd) {
+    justify-content: flex-start;
+  }
+  .navbar .specifications .item:nth-child(even) {
+    justify-content: flex-start;
+  }
+}
