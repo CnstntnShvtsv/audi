@@ -77,6 +77,12 @@ header .header .contacts .item .sup-info {
   font-size: 12px;
   font-weight: 300;
 }
+header .header .contacts .item a {
+  color: #000000;
+}
+header .header .contacts .item a:hover {
+  color: #bb0a30;
+}
 header .header .contacts .item .main-info {
   font-size: 15px;
   position: relative;
@@ -244,19 +250,12 @@ header .header .swipe-box .swipe {
 }
 .navbar .banner-a4 {
   background-image: url("../images/audi-a4/img-lg_banner-a4.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 600px;
 }
 .navbar .banner-a5 {
   background-image: url("../images/audi-a5/img-lg_banner-a5.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 600px;
+}
+.navbar .banner-q3sb {
+  background-image: url("../images/audi-q3sb/img-lg_banner-q3sb.jpg");
 }
 .navbar .specifications {
   display: flex;
@@ -293,6 +292,7 @@ header .header .swipe-box .swipe {
 }
 .inner-title h1 {
   padding-right: 40px;
+  min-width: 50%;
 }
 .inner-title .pre-order p {
   padding-right: 30px;

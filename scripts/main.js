@@ -113,3 +113,19 @@ $('.cf-item-info .close-btn').click(function () {
     $('.item').removeClass('active');
     $('body').css('overflow', 'auto');
 });
+
+// Show more info
+$('.digital-panel .btn-info').click(function () {
+    $('.digital-panel .hidden-info').toggleClass('show');
+    $(this).toggleClass('active');
+});
+
+$('.driving-pleasure .btn-info').click(function () {
+    $('.driving-pleasure .hidden-info').toggleClass('show');
+    $(this).toggleClass('active');
+});
+
+$('.functionality .btn-info').click(function () {
+    $('.functionality .hidden-info').toggleClass('show');
+    $(this).toggleClass('active');
+});

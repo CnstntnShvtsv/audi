@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/audi-q3sb.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicons/favicon.ico">
+
+    <title>Q3 Sportback</title>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="hellopreloader">
+        <div id="hellopreloader_preload"></div>
+    </div>
+    <script type="text/javascript">
+        var hellopreloader = document.getElementById("hellopreloader_preload");
+
+        function fadeOutnojquery(el) {
+            el.style.opacity = 1;
+            var interhellopreloader = setInterval(function () {
+                el.style.opacity = el.style.opacity - 0.05;
+                if (el.style.opacity <= 0.05) {
+                    clearInterval(interhellopreloader);
+                    hellopreloader.style.display = "none";
+                }
+            }, 16);
+        }
+        window.onload = function () {
+            setTimeout(function () {
+                fadeOutnojquery(hellopreloader);
+            }, 500); // Время прелоадера 0.5s
+        };
+    </script>
+    <style>
+        #hellopreloader>p {
+            display: none;
+        }
+
+        #hellopreloader_preload {
+            display: block;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: #808080 url("images/tail-spin.svg") center center no-repeat;
+            background-size: 48px;
+        }
+    </style>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header">
+                <div class="logo-title">
+                    <span>Ауди</span> <br>
+                    Центр Выборгский
+                </div>
+                <div class="contacts">
+                    <div class="item">
+                        <div class="sup-info">с 9:00 до 21:00</div>
+                        <a href="tel:+78125011334" class="main-info">+7 (812) 501-13-34
+                            <img src="images/icon_phone.svg">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <div class="sup-info">Официальный дилер Audi</div>
+                        <div class="main-info">Выборгское шоссе, д. 352 лит. А
+                            <img src="images/icon_lockation.svg">
+                        </div>
+                    </div>
+                </div>
+                <img class="logo" src="images/logo_audi.svg"></img>
+
+                <!-- Подсказка "свайп" -->
+                <div class="swipe-box">
+                    <div class="swipe"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="container">
+            <div class="navbar-nav">
+                <a class="nav-link" href="https://sale.audi-vyborgsky.ru/model/a3-sedan">A3 Sedan</a>
+                <a class="nav-link" href="index-a4.html">A4 Edition One*</a>
+                <a class="nav-link" href="index-a5.html">A5 Edition One*</a>
+                <a class="nav-link" href="https://sale.audi-vyborgsky.ru/model/a6">A6</a>
+                <a class="nav-link" href="https://sale.audi-vyborgsky.ru/model/a7">A7</a>
+                <a class="nav-link" href="https://sale.audi-vyborgsky.ru/model/a8-l">A8L</a>
+                <a class="nav-link" href="https://sale.audi-vyborgsky.ru/model/q3-1">Q3</a>
+                <a class="nav-link active" href="index-q3sb.html">Q3 Sportback</a>
+                <a class="nav-link" href="https://sale.audi-vyborgsky.ru/model/q5">Q5</a>
+                <a class="nav-link" href="https://sale.audi-vyborgsky.ru/model/q7">Q7</a>
+                <a class="nav-link" href="https://sale.audi-vyborgsky.ru/model/q8">Q8</a>
+                <a class="empty-link"></a>
+            </div>
+        </div>
+        <!-- Banner -->
+        <div class="banner banner-q3sb"></div>
+        <div class="container">
+            <div class="specifications">
+                <div class="item">
+                    <img src="images/icon_gearbox.svg">
+                    <span>6-ст. S tronic</span>
+                </div>
+                <div class="item">
+                    <img src="images/icon_gas-station.svg">
+                    <span>5,9 л/100 км</span>
+                </div>
+                <div class="item">
+                    <img src="images/icon_wheel-drive.svg">
+                    <span>Передний привод</span>
+                </div>
+                <div class="item">
+                    <img src="images/icon_car-speed.svg">
+                    <span>207 км/ч</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <main>
+        <div class="container">
+            <section class="inner-title">
+                <h1>Новый компактный купе-кроссовер Audi&nbsp;Q3 Sportback</h1>
+                <div class="pre-order">
+                    <p>Он всегда будет в центре внимания, но при этом станет вашим верным компаньоном и спутником в
+                        повседневной жизни. Новый Audi Q3 Sportback сочетает в себе эстетику и эмоциональность купе с
+                        энергичностью и функциональностью кроссовера</p>
+                    <p>Широкие возможности информационно-развлекательной системы, богатый выбор стандартного и
+                        опционального оборудования, а также полная интеграция автомобиля во всемирную сеть обеспечивают
+                        исключительное удовольствие от вождения. Новый компактный купе-кроссовер Audi Q3 Sportback
+                        никого не оставит равнодушным.</p>
+                    <div class="item-buttons">
+                        <a class="order-btn">Сделать предзаказ</a>
+                        <a class="pdf-btn" href="#" target="_blank">Смотреть PDF</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery">
+                <!-- Swiper -->
+                <div class="swiper-container gallery-top">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/audi-q3sb/img-lg_gallery-01.jpg" alt="slide-01">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/audi-q3sb/img-lg_gallery-02.jpg" alt="slide-02">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/audi-q3sb/img-lg_gallery-03.jpg" alt="slide-03">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/audi-q3sb/img-lg_gallery-04.jpg" alt="slide-04">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/audi-q3sb/img-lg_gallery-05.jpg" alt="slide-05">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/audi-q3sb/img-lg_gallery-06.jpg" alt="slide-06">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/audi-q3sb/img-lg_gallery-07.jpg" alt="slide-07">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/audi-q3sb/img-lg_gallery-08.jpg" alt="slide-08">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/audi-q3sb/img-lg_gallery-09.jpg" alt="slide-09">
+                        </div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next swiper-button-white"></div>
+                    <div class="swiper-button-prev swiper-button-white"></div>
+                </div>
+                <div class="swiper-container gallery-thumbs">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/audi-q3sb/img-lg_gallery-01.jpg" alt="slide-01">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/audi-q3sb/img-lg_gallery-02.jpg" alt="slide-02">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/audi-q3sb/img-lg_gallery-03.jpg" alt="slide-03">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/audi-q3sb/img-lg_gallery-04.jpg" alt="slide-04">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/audi-q3sb/img-lg_gallery-05.jpg" alt="slide-05">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/audi-q3sb/img-lg_gallery-06.jpg" alt="slide-06">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/audi-q3sb/img-lg_gallery-07.jpg" alt="slide-07">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/audi-q3sb/img-lg_gallery-08.jpg" alt="slide-08">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/audi-q3sb/img-lg_gallery-09.jpg" alt="slide-09">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Pop-Ups -->
+        <div class="form-wrapper">
+            <!-- Pre-order Pop-up -->
+            <div class="pre-order-form">
+                <h2>Получить предложение</h2>
+                <p>Вы можете оставить заявку на консультацию и наши менеджеры помогут вам найти автомобиль и ответить на
+                    все вопросы.</p>
+                <form action="">
+                    <input type="tel" placeholder="Телефон">
+                    <div class="checkbox">
+                        <input type="checkbox" name="data-processing" id="data-processing">
+                        <label for="data-processing">Согласие на <span>обработку персональных данных</span></label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="advertising" id="advertising">
+                        <label for="advertising">Согласие на <span>получение рекламной информации
+                                Audi</span></label>
+                    </div>
+                    <input type="button" value="Отправить заявку">
+                </form>
+                <img class="close-btn" src="images/btn_close-black.svg">
+            </div>
+        </div>
+        <!-- Banner -->
+        <div class="banner-bg">
+            <picture>
+                <source srcset="images/audi-q3sb/img-lg_bg-01.webp" type="image/webp">
+                <source srcset="images/audi-q3sb/img-lg_bg-01.jpg" type="image/jpeg">
+                <img src="images/audi-q3sb/img-lg_bg-01.jpg">
+            </picture>
+        </div>
+
+        <section class="prog-design">
+            <div class="header-info">
+                <h2>Прогрессивный дизайн</h2>
+                <div class="text">
+                    <p>Audi Q3 Sportback — новый автомобиль в модельном ряду марки, отличающийся эстетикой купе
+                        и возможностями кроссовера. В передней части автомобиля доминируют крупная восьмиугольная
+                        решётка Singleframe и боковые воздухозаборники. Напоминающий купе силуэт новой модели обращает
+                        на себя внимание при взгляде в профиль. Длинная и элегантная плечевая линия подчёркивает
+                        динамику автомобиля и его спортивный характер. Самые заметные элементы в задней части — покатая
+                        линия крыши, низкое заднее стекло и резко очерченные фонари.</p>
+                    <p>Особая концепция подбора комплектаций позволяет придать внешности вашего автомобиля
+                        индивидуальность в соответствии с вашими личными предпочтениями. Так, при выборе линии S ваш
+                        Audi Q3 Sportback получит бамперы с контрастными элементами, 18-дюймовые диски дизайна «5 спиц
+                        спиц V», а также алюминиевые накладки на пороги передних дверей, дополненные подсветкой
+                        и украшенные логотипом S</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="banner-bg">
+            <picture>
+                <source srcset="images/audi-q3sb/img-lg_gallery-02.webp" type="image/webp">
+                <source srcset="images/audi-q3sb/img-lg_gallery-02.jpg" type="image/jpeg">
+                <img src="images/audi-q3sb/img-lg_gallery-02.jpg">
+            </picture>
+        </div>
+
+        <section class="digital-panel">
+            <div class="header-info">
+                <h2>Цифровая приборная панель</h2>
+                <div class="text">
+                    <p>Audi Q3 Sportback предлагает владельцу самые современные информационно-развлекательные системы,
+                        пришедшие из сегмента бизнес-класса. В базовую комплектацию входит цифровая приборная панель
+                        с экраном диагональю 10,25 дюйма. В качестве опции доступна виртуальная приборная панель Audi
+                        virtual cockpit plus. В этом случае на дисплей высокого разрешения диагональю 12,3 дюйма
+                        выводятся впечатляющая чёткая графика и анимация, а также вся необходимая водителю информация
+                        об автомобиле. Управление опциональной топовой информационно-развлекательной системой</p>
+                    <p>MMI Navigation plus с поддержкой MMI осуществляется с помощью дисплея диагональю 10,1 дюйма,
+                        расположенного на центральной консоли. Множество разнообразных интерфейсов и разъёмов позволяют
+                        интегрировать ваши мобильные устройства¹ в систему автомобиля. Audi smartphone interface
+                        предназначен для подключения вашего смартфона в автомобиле Audi. Данные со смартфона передаются
+                        прямо на дисплей MMI. Удобное управление навигационной системой, телефонными звонками,
+                        музыкальными файлами и сторонними приложениями с помощью MMI.</p>
+                </div>
+            </div>
+            <div class="media-info"></div>
+            <div class="hidden-info">
+                <div class="show-more">
+                    <a class="btn-info"></a>
+                    <div class="sub-title">Подробнее о Bang & Olufsen</div>
+                </div>
+                <div class="more-info">
+                    <h3>Трёхмерное звуковое пространство</h3>
+                    <img src="images/audi-q3sb/img-lg_gallery-08.jpg">
+                    <p>Bang & Olufsen in the Audi Q3 Sportback
+                        Опциональная аудиосистема Bang & Olufsen Premium Sound System с трёхмерным звучанием создаёт
+                        в салоне автомобиля атмосферу настоящего концертного зала. 15 мощных динамиков и 16-канальный
+                        усилитель общей мощностью 680 Вт создают насыщенную звуковую картину. Пространственный звук
+                        позволит вам оказаться в самом центре событий. Эксклюзивные решётки динамиков превосходно
+                        гармонируют с дизайном салона Audi Q3 Sportback.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="driving-pleasure">
+            <div class="header-info">
+                <h2>Удовольствие от вождения - <br>
+                    в стандартной комплектации</h2>
+                <div class="text">
+                    <p>Audi Q3 Sportback предлагает владельцу самые современные информационно-развлекательные системы,
+                        пришедшие из сегмента бизнес-класса. В базовую комплектацию входит цифровая приборная панель
+                        с экраном диагональю 10,25 дюйма. В качестве опции доступна виртуальная приборная панель Audi
+                        virtual cockpit plus. В этом случае на дисплей высокого разрешения диагональю 12,3 дюйма
+                        выводятся впечатляющая чёткая графика и анимация, а также вся необходимая водителю информация
+                        об автомобиле. Управление опциональной топовой информационно-развлекательной системой</p>
+                    <p>MMI Navigation plus с поддержкой MMI осуществляется с помощью дисплея диагональю 10,1 дюйма,
+                        расположенного на центральной консоли. Множество разнообразных интерфейсов и разъёмов позволяют
+                        интегрировать ваши мобильные устройства¹ в систему автомобиля. Audi smartphone interface
+                        предназначен для подключения вашего смартфона в автомобиле Audi. Данные со смартфона передаются
+                        прямо на дисплей MMI. Удобное управление навигационной системой, телефонными звонками,
+                        музыкальными файлами и сторонними приложениями с помощью MMI.</p>
+                </div>
+            </div>
+            <div class="media-info"></div>
+            <div class="hidden-info">
+                <div class="show-more">
+                    <a class="btn-info"></a>
+                    <div class="sub-title">Подробнее об ассистирующих системах</div>
+                </div>
+                <div class="more-info">
+                    <h3>Незаменимые помощники</h3>
+                    <img src="images/audi-q3sb/img-lg_gallery-09.jpg">
+                    <p>Surroundings of the Audi Q3 Sportback on the MMI display
+                        Широкий выбор электронных ассистирующих систем ³ позволяет водителю уверенно справляться с
+                        рутиной и стрессом городского трафика. Четыре камеры кругового обзора полностью охватывают
+                        пространство вокруг Audi Q3 Sportback. Дисплей системы MMI позволяет выбирать различные виды и
+                        уверенно маневрировать в стеснённых условиях</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="your-design">
+            <div class="header-info">
+                <h2>Салон: создайте свой дизайн</h2>
+                <div class="text">
+                    <p>Наша концепция линий оснащения позволяет вам создать собственный дизайн салона вашего Audi
+                        Q3 Sportback. Например, можно выбрать опциональный вариант дизайна салона, представленный
+                        на фотографии. В него входят спортивные передние сиденья, пакет многоцветной контурной и фоновой
+                        подсветки, а также высококачественные декоративные вставки. </p>
+                    <p>Опциональный пакет оснащения интерьера S line предлагает спортивные сиденья с логотипом S, обитое
+                        кожей трёхспицевое рулевое колесо с органами управления multifunction plus, отделанный
+                        перфорированной кожей рычаг коробки передач, а также накладки на педали и площадку
+                        из нержавеющей стали для левой ноги водителя.</p>
+                </div>
+            </div>
+            <div class="media-info">
+                <video autoplay loop muted>
+                    <source src="images/audi-q3sb/ambientlight.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <section class="functionality">
+            <div class="container">
+                <div class="header-info">
+                    <h2>Трансформация и функциональность</h2>
+                    <div class="text">
+                        <p>Audi Q3 Sportback отличается исключительно функциональным интерьером. На заднем сиденье
+                            размещаются трое взрослых пассажиров, при этом сиденье уже в базовой версии может двигаться
+                            вперед-назад в пределах 130 мм. Кроме того, можно выбрать одно из семи положений наклона
+                            разделённой на три части спинки. Объём багажного отделения составляет от 530 до 1400 л.
+                            В качестве опции предлагается электропривод двери багажного отделения, которую можно удобно
+                            открывать движением ноги под бампером, если у вас заняты руки.</p>
+                    </div>
+                </div>
+                <div class="media-info"></div>
+            </div>
+            <div class="hidden-info">
+                <div class="show-more">
+                    <a class="btn-info"></a>
+                    <div class="sub-title">Подробнее об оригинальных аксессуарах Audi</div>
+                </div>
+                <div class="more-info">
+                    <h3>Незаменимые помощники</h3>
+                    <img src="images/audi-q3sb/img-lg_gallery-09.jpg">
+                    <p>Программа оригинальных аксессуаров Audi предлагает дополнительные решения, способные сделать вашу
+                        повседневную жизнь более комфортной. Вот лишь два примера: специальное крепление позволит вам
+                        легко и безопасно перевозить велосипеды, а в размещении дополнительного багажа или спортивного
+                        инвентаря помогут поперечины и бокс, монтируемые на крыше.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bright-light">
+            <div class="container">
+                <div class="header-info">
+                    <h2>Яркий свет</h2>
+                    <div class="text">
+                        <p>Фары со светодиодной технологией в стандартной комплектации Audi Q3 Sportback. В качестве
+                            опции предлагаются светодиодные фары HD Matrix с динамическими указателями поворотов.
+                            Технология Audi Matrix LED выборочно затемняет движущиеся навстречу автомобили, оставляя
+                            окружающую дорогу ярко освещённой. Динамические указатели поворотов делают автомобиль
+                            стопроцентно узнаваемым.</p>
+                    </div>
+                </div>
+                <div class="media-info"></div>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="trust">
+                <div class="trust-logo">
+                    <img src="images/audi-q3sb/img-md_label-01.jpg">
+                </div>
+                <div class="trust-info">
+                    <h2>40 лет с quattro</h2>
+                    <p>Компания Audi – ведущий мировой производитель автомобилей класса Premium с постоянным полным
+                        приводом. Привод quattro добавляет динамики, делает движение безопасным, но при этом
+                        захватывающим, помогая чётко следовать наилучшей траектории. Таковы неоспоримые аргументы,
+                        которые убеждают огромное количество водителей по всему миру делать выбор в пользу Audi.</p>
+                </div>
+            </section>
+            <section class="trust">
+                <div class="trust-logo">
+                    <img src="images/audi-q3sb/img-md_label-02.jpg">
+                </div>
+                <div class="trust-info">
+                    <h2>Гарантия <br>
+                        производителя — 4 года</h2>
+                    <p>На автомобили марки Audi производителем предоставляется гарантия качества на срок 2 года, а также
+                        на дополнительные 2 года или до достижения общего пробега автомобиля 120 000 км (в зависимости
+                        от того, какое событие наступит ранее), при этом в первые 2 года пробег не ограничивается и не
+                        учитывается.</p>
+                </div>
+            </section>
+
+            <section class="special-offer">
+                <h2>У вас есть вопросы? <br>
+                    Звоните +7 (812) 501-13-34</h2>
+                <p>Вы можете оставить заявку на консультацию и наши менеджеры помогут вам найти автомобиль и ответить на
+                    все вопросы.</p>
+                <form action="">
+                    <input type="tel" placeholder="Телефон">
+                    <input type="button" value="Получить спецпредложение">
+                    <div class="checkbox">
+                        <input type="checkbox" name="data-processing" id="data-processing">
+                        <label for="data-processing">Согласие на <span>обработку персональных данных</span></label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" name="advertising" id="advertising">
+                        <label for="advertising">Согласие на <span>получение рекламной информации Audi</span></label>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <div class="container-special">
+            <section class="map-form">
+                <div class="map">
+                    <iframe
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3Abcf7028403311870dc71d9b640a4b3c5881a2c419ae849d4ebcbcf0cd57a3c0a&amp;source=constructor"
+                        width="1200" height="640" frameborder="0"></iframe>
+                </div>
+                <div class="form">
+                    <div class="form-header">
+                        <div class="logo-title">
+                            <p class="txt-red">Ауди</p>
+                            <p>Центр Выборгский</p>
+                            <p class="txt-thin">Официальный дилер Audi</p>
+                        </div>
+
+                        <div class="contacts">+7 (812) 501-13-34
+                            <img src="images/icon_phone.svg">
+                        </div>
+
+                        <div class="address">Санкт-Петербург, Выборгское шоссе, д. 352 лит. А <br> Ежедневно с 9:00 до
+                            21:00
+                            <img src="images/icon_lockation.svg">
+                        </div>
+                        <a class="hidden-link"
+                            href="https://yandex.ru/maps/2/saint-petersburg/house/vyborgskoye_shosse_352/Z0kYdAJkTUcEQFhqfXx4dXxnbA==/?ll=30.252423%2C60.094688&z=14.66"
+                            target="_blank">
+                            Показать на карте
+                        </a>
+                    </div>
+                    <form action="">
+                        <input type="tel" placeholder="Телефон">
+                        <input class="order-btn" type="button" value="Сделать предзаказ">
+                        <div class="checkbox">
+                            <input type="checkbox" name="data-processing" id="data-processing">
+                            <label for="data-processing">Согласие на <span>обработку персональных данных</span></label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" name="advertising" id="advertising">
+                            <label for="advertising">Согласие на <span>получение рекламной информации
+                                    Audi</span></label>
+                        </div>
+                    </form>
+                    <img src="images/audi-q3sb/img-lg_gallery-03.jpg">
+                </div>
+            </section>
+            <section class="add-info">
+                <div class="limiter">
+                    <p>1Крупнейший дилер Audi в Санкт-Петербурге по количеству демонстрируемых новых автомобилей в
+                        шоу-руме. Обращаем ваше внимание на то, что вся предоставленная на сайте информация, касающаяся
+                        максимальных цен перепродажи, спецификаций и технических характеристик носит информационный
+                        характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи
+                        437 (2) Гражданского кодекса Российской Федерации. Для получения подробной информации,
+                        пожалуйста, обращайтесь к официальному дилеру марки Audi.</p>
+                    <p>1Крупнейший дилер Audi в Санкт-Петербурге по количеству демонстрируемых новых автомобилей в
+                        шоу-руме. Обращаем ваше внимание на то, что вся предоставленная на сайте информация, касающаяся
+                        максимальных цен перепродажи, спецификаций и технических характеристик носит информационный
+                        характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи
+                        437 (2) Гражданского кодекса Российской Федерации. Для получения подробной информации,
+                        пожалуйста, обращайтесь к официальному дилеру марки Audi.</p>
+                </div>
+                <a class="expand-btn">Развернуть</a>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>©2020 AUDI Все права защищены</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/jquery-1.12.4.min.js"></script>
+    <script src="swiper/swiper-bundle.js"></script>
+    <script src="scripts/slider.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
